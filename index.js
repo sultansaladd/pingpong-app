@@ -17,9 +17,9 @@ app.get("/ping", (req, res) => {
 });
 
 app.get("/health", (req, res) => {
-        return res.json({status: "${process.env.APP_NAME} is running", data: "Application healthy" });
+        return res.json({status: `${process.env.APP_NAME} is running on port ${process.env.PORT}`, data: "Application healthy" });
 });
 
 
 app.listen(process.env.PORT || 3000);
-console.log(`App listening on http://localhost:3000`);
+console.log(`App listening on http://localhost:${process.env.PORT}`);
