@@ -1,5 +1,7 @@
 const express = require("express");
 const cors = require('cors')
+const dotenv = require('dotenv');
+dotenv.config();
 
 const app = express();
 
@@ -14,5 +16,10 @@ app.get("/ping", (req, res) => {
   return res.json({data: "pong" })
 });
 
-app.listen(3000);
+app.get("/health", (req, res) => {
+        return res.json({status: "${process.env.APP_NAME} is running", data: "Application healthy" });
+});
+
+
+app.listen(process.env.PORT || 3000);
 console.log(`App listening on http://localhost:3000`);
