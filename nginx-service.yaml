@@ -1,10 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-service
+  name: node-app-depl
+  namespace: nginx-ingress
 spec:
   selector:
-    app: nginx
+    app: node-app-depl
   ports:
   - protocol: TCP
     port: 80

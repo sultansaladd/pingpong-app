@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: node-app-ingress
+  namespace: default
+spec:
+  rules:
+    - host: 127.0.0.1
+      http:
+          paths:
+            - path: /node-app-depl
+              backend:
+                serviceName: node-app-depl
+                servicePort: 80
+                
+            
