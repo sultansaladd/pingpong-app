@@ -1,13 +1,13 @@
 {
   "name": "pingpongapps",
   "version": "1.0.0",
-  "description": "",
+  "description": "Online test Refactory.id",
   "main": "index.js",
   "scripts": {
     "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Sultan Saladdin",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
